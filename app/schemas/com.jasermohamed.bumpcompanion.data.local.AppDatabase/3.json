@@ -1,0 +1,1088 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "9fd585ea05ca79a340b3f5d7b7e4c8d0",
+    "entities": [
+      {
+        "tableName": "speed_bumps",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `latitude` REAL NOT NULL, `longitude` REAL NOT NULL, `rawLatitude` REAL NOT NULL, `rawLongitude` REAL NOT NULL, `horizontalAccuracyMetres` REAL NOT NULL, `coordinateConfidence` REAL NOT NULL, `confidence` REAL NOT NULL, `status` TEXT NOT NULL, `source` TEXT NOT NULL, `directionality` TEXT NOT NULL, `primaryBearing` REAL, `oppositeBearing` REAL, `bearingTolerance` REAL NOT NULL, `firstDetectedAt` INTEGER NOT NULL, `lastDetectedAt` INTEGER NOT NULL, `lastWarnedAt` INTEGER, `encounterCount` INTEGER NOT NULL, `confirmationCount` INTEGER NOT NULL, `rejectionCount` INTEGER NOT NULL, `missingReports` INTEGER NOT NULL, `importedSource` TEXT, `notes` TEXT NOT NULL, `warningEnabled` INTEGER NOT NULL, `customWarningDistanceMetres` INTEGER, `algorithmVersion` INTEGER NOT NULL, `archived` INTEGER NOT NULL, `markedRemoved` INTEGER NOT NULL, `regionLabel` TEXT, `roadName` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rawLatitude",
+            "columnName": "rawLatitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rawLongitude",
+            "columnName": "rawLongitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "horizontalAccuracyMetres",
+            "columnName": "horizontalAccuracyMetres",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coordinateConfidence",
+            "columnName": "coordinateConfidence",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "confidence",
+            "columnName": "confidence",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "directionality",
+            "columnName": "directionality",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "primaryBearing",
+            "columnName": "primaryBearing",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "oppositeBearing",
+            "columnName": "oppositeBearing",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "bearingTolerance",
+            "columnName": "bearingTolerance",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstDetectedAt",
+            "columnName": "firstDetectedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastDetectedAt",
+            "columnName": "lastDetectedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastWarnedAt",
+            "columnName": "lastWarnedAt",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "encounterCount",
+            "columnName": "encounterCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "confirmationCount",
+            "columnName": "confirmationCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rejectionCount",
+            "columnName": "rejectionCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "missingReports",
+            "columnName": "missingReports",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "importedSource",
+            "columnName": "importedSource",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "warningEnabled",
+            "columnName": "warningEnabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customWarningDistanceMetres",
+            "columnName": "customWarningDistanceMetres",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "algorithmVersion",
+            "columnName": "algorithmVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "archived",
+            "columnName": "archived",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "markedRemoved",
+            "columnName": "markedRemoved",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "regionLabel",
+            "columnName": "regionLabel",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "roadName",
+            "columnName": "roadName",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_speed_bumps_status",
+            "unique": false,
+            "columnNames": [
+              "status"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_speed_bumps_status` ON `${TABLE_NAME}` (`status`)"
+          },
+          {
+            "name": "index_speed_bumps_lastDetectedAt",
+            "unique": false,
+            "columnNames": [
+              "lastDetectedAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_speed_bumps_lastDetectedAt` ON `${TABLE_NAME}` (`lastDetectedAt`)"
+          },
+          {
+            "name": "index_speed_bumps_importedSource",
+            "unique": false,
+            "columnNames": [
+              "importedSource"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_speed_bumps_importedSource` ON `${TABLE_NAME}` (`importedSource`)"
+          },
+          {
+            "name": "index_speed_bumps_latitude_longitude",
+            "unique": false,
+            "columnNames": [
+              "latitude",
+              "longitude"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_speed_bumps_latitude_longitude` ON `${TABLE_NAME}` (`latitude`, `longitude`)"
+          }
+        ]
+      },
+      {
+        "tableName": "candidate_events",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `driveId` TEXT, `detectedAt` INTEGER NOT NULL, `eventElapsedRealtimeNanos` INTEGER NOT NULL, `latitude` REAL, `longitude` REAL, `horizontalAccuracyMetres` REAL, `coordinateConfidence` REAL NOT NULL, `speedMetresPerSecond` REAL NOT NULL, `bearingDegrees` REAL, `confidence` REAL NOT NULL, `eventType` TEXT NOT NULL, `decision` TEXT NOT NULL, `confidenceReasons` TEXT NOT NULL, `positiveVerticalPeak` REAL NOT NULL, `negativeVerticalPeak` REAL NOT NULL, `peakToPeak` REAL NOT NULL, `peakGapMillis` INTEGER NOT NULL, `verticalRms` REAL NOT NULL, `jerkPeak` REAL NOT NULL, `gyroscopeEnergy` REAL NOT NULL, `orientationVariance` REAL NOT NULL, `phoneStability` REAL NOT NULL, `source` TEXT NOT NULL, `note` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "driveId",
+            "columnName": "driveId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "detectedAt",
+            "columnName": "detectedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eventElapsedRealtimeNanos",
+            "columnName": "eventElapsedRealtimeNanos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "horizontalAccuracyMetres",
+            "columnName": "horizontalAccuracyMetres",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "coordinateConfidence",
+            "columnName": "coordinateConfidence",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "speedMetresPerSecond",
+            "columnName": "speedMetresPerSecond",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bearingDegrees",
+            "columnName": "bearingDegrees",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "confidence",
+            "columnName": "confidence",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eventType",
+            "columnName": "eventType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "decision",
+            "columnName": "decision",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "confidenceReasons",
+            "columnName": "confidenceReasons",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "positiveVerticalPeak",
+            "columnName": "positiveVerticalPeak",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "negativeVerticalPeak",
+            "columnName": "negativeVerticalPeak",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "peakToPeak",
+            "columnName": "peakToPeak",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "peakGapMillis",
+            "columnName": "peakGapMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verticalRms",
+            "columnName": "verticalRms",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jerkPeak",
+            "columnName": "jerkPeak",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gyroscopeEnergy",
+            "columnName": "gyroscopeEnergy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "orientationVariance",
+            "columnName": "orientationVariance",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phoneStability",
+            "columnName": "phoneStability",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "note",
+            "columnName": "note",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_candidate_events_driveId",
+            "unique": false,
+            "columnNames": [
+              "driveId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_candidate_events_driveId` ON `${TABLE_NAME}` (`driveId`)"
+          },
+          {
+            "name": "index_candidate_events_decision",
+            "unique": false,
+            "columnNames": [
+              "decision"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_candidate_events_decision` ON `${TABLE_NAME}` (`decision`)"
+          },
+          {
+            "name": "index_candidate_events_detectedAt",
+            "unique": false,
+            "columnNames": [
+              "detectedAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_candidate_events_detectedAt` ON `${TABLE_NAME}` (`detectedAt`)"
+          },
+          {
+            "name": "index_candidate_events_latitude_longitude",
+            "unique": false,
+            "columnNames": [
+              "latitude",
+              "longitude"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_candidate_events_latitude_longitude` ON `${TABLE_NAME}` (`latitude`, `longitude`)"
+          }
+        ]
+      },
+      {
+        "tableName": "drive_sessions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `startedAt` INTEGER NOT NULL, `endedAt` INTEGER, `durationMillis` INTEGER NOT NULL, `distanceMetres` REAL NOT NULL, `maximumSpeedMetresPerSecond` REAL NOT NULL, `averageSpeedMetresPerSecond` REAL NOT NULL, `candidateCount` INTEGER NOT NULL, `confirmedCount` INTEGER NOT NULL, `rejectedCount` INTEGER NOT NULL, `knownBumpPasses` INTEGER NOT NULL, `warningCount` INTEGER NOT NULL, `startLatitude` REAL, `startLongitude` REAL, `endLatitude` REAL, `endLongitude` REAL, `incomplete` INTEGER NOT NULL, `placementProfile` TEXT NOT NULL, `vehicleProfile` TEXT, `algorithmVersion` INTEGER NOT NULL, `serviceInterruptions` INTEGER NOT NULL, `detectionQuality` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startedAt",
+            "columnName": "startedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endedAt",
+            "columnName": "endedAt",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "durationMillis",
+            "columnName": "durationMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "distanceMetres",
+            "columnName": "distanceMetres",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maximumSpeedMetresPerSecond",
+            "columnName": "maximumSpeedMetresPerSecond",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "averageSpeedMetresPerSecond",
+            "columnName": "averageSpeedMetresPerSecond",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "candidateCount",
+            "columnName": "candidateCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "confirmedCount",
+            "columnName": "confirmedCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rejectedCount",
+            "columnName": "rejectedCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "knownBumpPasses",
+            "columnName": "knownBumpPasses",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "warningCount",
+            "columnName": "warningCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startLatitude",
+            "columnName": "startLatitude",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "startLongitude",
+            "columnName": "startLongitude",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "endLatitude",
+            "columnName": "endLatitude",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "endLongitude",
+            "columnName": "endLongitude",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "incomplete",
+            "columnName": "incomplete",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "placementProfile",
+            "columnName": "placementProfile",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleProfile",
+            "columnName": "vehicleProfile",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "algorithmVersion",
+            "columnName": "algorithmVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "serviceInterruptions",
+            "columnName": "serviceInterruptions",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "detectionQuality",
+            "columnName": "detectionQuality",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_drive_sessions_startedAt",
+            "unique": false,
+            "columnNames": [
+              "startedAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_drive_sessions_startedAt` ON `${TABLE_NAME}` (`startedAt`)"
+          },
+          {
+            "name": "index_drive_sessions_incomplete",
+            "unique": false,
+            "columnNames": [
+              "incomplete"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_drive_sessions_incomplete` ON `${TABLE_NAME}` (`incomplete`)"
+          }
+        ]
+      },
+      {
+        "tableName": "encounters",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `bumpId` TEXT, `candidateId` TEXT, `driveId` TEXT, `encounteredAt` INTEGER NOT NULL, `latitude` REAL NOT NULL, `longitude` REAL NOT NULL, `accuracyMetres` REAL NOT NULL, `bearingDegrees` REAL, `speedMetresPerSecond` REAL NOT NULL, `confidence` REAL NOT NULL, `source` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bumpId",
+            "columnName": "bumpId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "candidateId",
+            "columnName": "candidateId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "driveId",
+            "columnName": "driveId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "encounteredAt",
+            "columnName": "encounteredAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accuracyMetres",
+            "columnName": "accuracyMetres",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bearingDegrees",
+            "columnName": "bearingDegrees",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "speedMetresPerSecond",
+            "columnName": "speedMetresPerSecond",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "confidence",
+            "columnName": "confidence",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_encounters_bumpId",
+            "unique": false,
+            "columnNames": [
+              "bumpId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_encounters_bumpId` ON `${TABLE_NAME}` (`bumpId`)"
+          },
+          {
+            "name": "index_encounters_candidateId",
+            "unique": false,
+            "columnNames": [
+              "candidateId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_encounters_candidateId` ON `${TABLE_NAME}` (`candidateId`)"
+          },
+          {
+            "name": "index_encounters_driveId",
+            "unique": false,
+            "columnNames": [
+              "driveId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_encounters_driveId` ON `${TABLE_NAME}` (`driveId`)"
+          },
+          {
+            "name": "index_encounters_encounteredAt",
+            "unique": false,
+            "columnNames": [
+              "encounteredAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_encounters_encounteredAt` ON `${TABLE_NAME}` (`encounteredAt`)"
+          }
+        ]
+      },
+      {
+        "tableName": "location_track_points",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`driveId` TEXT NOT NULL, `elapsedRealtimeNanos` INTEGER NOT NULL, `epochMillis` INTEGER NOT NULL, `latitude` REAL NOT NULL, `longitude` REAL NOT NULL, `accuracyMetres` REAL NOT NULL, `bearingDegrees` REAL, `speedMetresPerSecond` REAL, PRIMARY KEY(`driveId`, `elapsedRealtimeNanos`))",
+        "fields": [
+          {
+            "fieldPath": "driveId",
+            "columnName": "driveId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "elapsedRealtimeNanos",
+            "columnName": "elapsedRealtimeNanos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "epochMillis",
+            "columnName": "epochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accuracyMetres",
+            "columnName": "accuracyMetres",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bearingDegrees",
+            "columnName": "bearingDegrees",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "speedMetresPerSecond",
+            "columnName": "speedMetresPerSecond",
+            "affinity": "REAL"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "driveId",
+            "elapsedRealtimeNanos"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_location_track_points_driveId",
+            "unique": false,
+            "columnNames": [
+              "driveId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_location_track_points_driveId` ON `${TABLE_NAME}` (`driveId`)"
+          },
+          {
+            "name": "index_location_track_points_epochMillis",
+            "unique": false,
+            "columnNames": [
+              "epochMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_location_track_points_epochMillis` ON `${TABLE_NAME}` (`epochMillis`)"
+          }
+        ]
+      },
+      {
+        "tableName": "calibration_profiles",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `accelerometerNoiseRms` REAL NOT NULL, `gyroscopeNoiseRms` REAL NOT NULL, `gravityX` REAL NOT NULL, `gravityY` REAL NOT NULL, `gravityZ` REAL NOT NULL, `samplingConsistency` REAL NOT NULL, `engineVibrationRms` REAL NOT NULL, `sampleCount` INTEGER NOT NULL, `algorithmVersion` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accelerometerNoiseRms",
+            "columnName": "accelerometerNoiseRms",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gyroscopeNoiseRms",
+            "columnName": "gyroscopeNoiseRms",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gravityX",
+            "columnName": "gravityX",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gravityY",
+            "columnName": "gravityY",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gravityZ",
+            "columnName": "gravityZ",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "samplingConsistency",
+            "columnName": "samplingConsistency",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "engineVibrationRms",
+            "columnName": "engineVibrationRms",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sampleCount",
+            "columnName": "sampleCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "algorithmVersion",
+            "columnName": "algorithmVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_calibration_profiles_createdAt",
+            "unique": false,
+            "columnNames": [
+              "createdAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_calibration_profiles_createdAt` ON `${TABLE_NAME}` (`createdAt`)"
+          }
+        ]
+      },
+      {
+        "tableName": "import_batches",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `importedAt` INTEGER NOT NULL, `sourceName` TEXT NOT NULL, `fileName` TEXT NOT NULL, `schemaVersion` INTEGER NOT NULL, `insertedCount` INTEGER NOT NULL, `mergedCount` INTEGER NOT NULL, `invalidCount` INTEGER NOT NULL, `undone` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "importedAt",
+            "columnName": "importedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceName",
+            "columnName": "sourceName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fileName",
+            "columnName": "fileName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schemaVersion",
+            "columnName": "schemaVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "insertedCount",
+            "columnName": "insertedCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mergedCount",
+            "columnName": "mergedCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "invalidCount",
+            "columnName": "invalidCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "undone",
+            "columnName": "undone",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_import_batches_importedAt",
+            "unique": false,
+            "columnNames": [
+              "importedAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_import_batches_importedAt` ON `${TABLE_NAME}` (`importedAt`)"
+          }
+        ]
+      },
+      {
+        "tableName": "import_batch_items",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`batchId` TEXT NOT NULL, `bumpId` TEXT NOT NULL, `createdNew` INTEGER NOT NULL, PRIMARY KEY(`batchId`, `bumpId`))",
+        "fields": [
+          {
+            "fieldPath": "batchId",
+            "columnName": "batchId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bumpId",
+            "columnName": "bumpId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdNew",
+            "columnName": "createdNew",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "batchId",
+            "bumpId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_import_batch_items_bumpId",
+            "unique": false,
+            "columnNames": [
+              "bumpId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_import_batch_items_bumpId` ON `${TABLE_NAME}` (`bumpId`)"
+          }
+        ]
+      },
+      {
+        "tableName": "diagnostic_files",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `driveId` TEXT, `fileName` TEXT NOT NULL, `loggingMode` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `sizeBytes` INTEGER NOT NULL, `expiresAt` INTEGER, `checksumSha256` TEXT, `corrupted` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "driveId",
+            "columnName": "driveId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "fileName",
+            "columnName": "fileName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "loggingMode",
+            "columnName": "loggingMode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sizeBytes",
+            "columnName": "sizeBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "expiresAt",
+            "columnName": "expiresAt",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "checksumSha256",
+            "columnName": "checksumSha256",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "corrupted",
+            "columnName": "corrupted",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_diagnostic_files_driveId",
+            "unique": false,
+            "columnNames": [
+              "driveId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_diagnostic_files_driveId` ON `${TABLE_NAME}` (`driveId`)"
+          },
+          {
+            "name": "index_diagnostic_files_createdAt",
+            "unique": false,
+            "columnNames": [
+              "createdAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_diagnostic_files_createdAt` ON `${TABLE_NAME}` (`createdAt`)"
+          },
+          {
+            "name": "index_diagnostic_files_expiresAt",
+            "unique": false,
+            "columnNames": [
+              "expiresAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_diagnostic_files_expiresAt` ON `${TABLE_NAME}` (`expiresAt`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9fd585ea05ca79a340b3f5d7b7e4c8d0')"
+    ]
+  }
+}

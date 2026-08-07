@@ -1,0 +1,4 @@
+-keepattributes Signature,*Annotation*
+-keep class com.jasermohamed.bumpcompanion.data.exchange.** { *; }
+-keepclassmembers class **$$serializer { *; }
+-keep,includedescriptorclasses class com.jasermohamed.bumpcompanion.data.local.** { *; }

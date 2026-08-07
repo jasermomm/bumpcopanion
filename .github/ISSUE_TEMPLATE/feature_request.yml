@@ -1,0 +1,57 @@
+name: Feature request
+description: Suggest a focused improvement to BumpCompanion.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the user problem before proposing a solution. Do not include private location data.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What user need would this address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe a simple, focused solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional alternatives or workarounds.
+
+  - type: dropdown
+    id: detector_impact
+    attributes:
+      label: Does this affect bump detection?
+      options:
+        - No
+        - Yes
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add mockups or examples if useful, without exposing private information.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues for a similar request.
+          required: true

@@ -1,0 +1,156 @@
+{
+  "knownBump": {
+    "latitude": 30.0009,
+    "longitude": 31.0
+  },
+  "directApproach": [
+    {
+      "latitude": 30.0,
+      "longitude": 31.0,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0001,
+      "longitude": 31.0,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0002,
+      "longitude": 31.0,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0003,
+      "longitude": 31.0,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0004,
+      "longitude": 31.0,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0005,
+      "longitude": 31.0,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0006,
+      "longitude": 31.0,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0007,
+      "longitude": 31.0,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0008,
+      "longitude": 31.0,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0009,
+      "longitude": 31.0,
+      "speedMps": 12,
+      "bearing": 0
+    }
+  ],
+  "parallelRoad": [
+    {
+      "latitude": 30.0,
+      "longitude": 31.0012,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0001,
+      "longitude": 31.0012,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0002,
+      "longitude": 31.0012,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0003,
+      "longitude": 31.0012,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0004,
+      "longitude": 31.0012,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0005,
+      "longitude": 31.0012,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0006,
+      "longitude": 31.0012,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0007,
+      "longitude": 31.0012,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0008,
+      "longitude": 31.0012,
+      "speedMps": 12,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0009,
+      "longitude": 31.0012,
+      "speedMps": 12,
+      "bearing": 0
+    }
+  ],
+  "turnAway": [
+    {
+      "latitude": 30.0,
+      "longitude": 31.0,
+      "speedMps": 10,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.0002,
+      "longitude": 31.0,
+      "speedMps": 10,
+      "bearing": 0
+    },
+    {
+      "latitude": 30.00025,
+      "longitude": 31.0002,
+      "speedMps": 10,
+      "bearing": 90
+    },
+    {
+      "latitude": 30.00025,
+      "longitude": 31.0005,
+      "speedMps": 10,
+      "bearing": 90
+    }
+  ]
+}

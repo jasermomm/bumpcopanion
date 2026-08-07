@@ -1,0 +1,118 @@
+name: Bug report
+description: Report a reproducible problem in BumpCompanion.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve BumpCompanion. Do not include private location history, credentials, or diagnostic recordings in a public issue.
+
+  - type: input
+    id: app_version
+    attributes:
+      label: BumpCompanion version
+      description: Find this in the installed app information or release name.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: android_version
+    attributes:
+      label: Android version
+      placeholder: "Android 16"
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device model
+      placeholder: "Manufacturer and model"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: Problem type
+      options:
+        - Crash or failure
+        - False bump detection
+        - Missed bump
+        - Incorrect approach warning
+        - User interface
+        - Import or export
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and its impact. Remove private information from logs before sharing them.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Start Drive Mode
+        2. ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: input
+    id: approximate_speed
+    attributes:
+      label: Approximate driving speed, if relevant
+      description: Include units. Leave blank if unknown or unrelated.
+      placeholder: "30 km/h"
+
+  - type: input
+    id: mounting
+    attributes:
+      label: Phone mounting and orientation, if relevant
+      placeholder: "Rigid dashboard mount, portrait"
+
+  - type: input
+    id: road_type
+    attributes:
+      label: Road type or conditions, if relevant
+      placeholder: "Smooth asphalt, rough road, raised table, pothole nearby"
+
+  - type: textarea
+    id: location_context
+    attributes:
+      label: Optional location context
+      description: Do not post an exact address or GPS coordinates unless you are comfortable making them public. A broad description is usually enough.
+      placeholder: "Urban two-lane road near a junction"
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add sanitized logs or screenshots if useful. Do not upload private recordings or location history.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I removed credentials and private location information from anything attached.
+          required: true
